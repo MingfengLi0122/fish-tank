@@ -33,5 +33,10 @@ class Fish extends Denizen {
     this.timeUntilSpeedChange = randRangeInt(5);
   }
 
+  eaten() {
+    if(this.position === BiteFish.position) {
+      this.kill();
+    }
+  }
 }
 
